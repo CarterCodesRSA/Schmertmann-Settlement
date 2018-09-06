@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href="./node_modules/bulma/css/bulma.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+
+	<title>Schmertmann</title>
+</head>
+
+<body>
+	<section class="section" id='heading'>
+		<div class="container">
+			<h1 class='title'>Schmertmanns Method</h1>
+			<h1 class='subtitle'>for settlement calculations</h1>
+		</div>
+	</section>
+	<div class="container" id='input-fields'>
+		<form id="foundation-values">
+			<div id="general-fields" class="columns">
+				<div class="column">
+					<h1 class='subtitle'>Foundation Dimensions</h1>
+					<div class="control">
+						<label class="label">Length</label>
+						<input class='input is-small' type="text" placeholder="Length of foundation" id='length'>
+					</div>
+					<div class="control">
+						<label class="label">Breadth</label>
+						<input class='input is-small' type="text" placeholder="Breadth of foundation" id='breadth'>
+					</div>
+					<div class="control">
+						<label class="label">Depth</label>
+						<input class='input is-small' type="text" placeholder="Depth of foundation" id='depth'>
+					</div>
+				</div>
+				<div class="column">
+					<h1 class='subtitle'>Soil Parameters</h1>
+					<div class="control">
+						<label class="label">Dry Density</label>
+						<input class='input is-small' type="text" placeholder="kN/m3" id='dry-density'>
+					</div>
+					<div class="control">
+						<label class="label">Saturated Density</label>
+						<input class='input is-small' type="text" placeholder="kN/m3" id='sat-density'>
+					</div>
+					<div class="control">
+						<label class="label">Water Table Depth</label>
+						<input class='input is-small' type="text" placeholder="meters below surface level" id='water-table'>
+					</div>
+				</div>
+				<div class="column">
+					<h1 class='subtitle'>Loading Values</h1>
+					<div class="control">
+						<label class="label">Applied Load</label>
+						<input class='input is-small' type="text" placeholder="kN/m2" id='app-load'>
+					</div>
+				</div>
+			</div>
+			<h1 class='subtitle '>DCP Test Results</h1>
+
+			<div class='input-table' id='input-table'>
+				<div class="columns" id='top-row'>
+					<div class="column is-3">
+						<label class="label">Max Depth per layer (m)</label>
+					</div>
+					<div class="column is-1">
+						<input class='input is-small' type="text" id='depth-range'>
+					</div>
+				</div>
+				<div class="columns" id='bottom-row'>
+					<div class="column is-3">
+						<label class="label">qc (MN/m2)</label>
+					</div>
+					<div class="column is-1">
+						<input class='input is-small' type="text" id='qc-val'>
+					</div>
+				</div>
+			</div>
+
+			<div class="buttons">
+				<input type="button" class="button is-success is-small" value='Add Field' id='add-field'>
+				<input type="button" class="button is-success is-small" value='Remove Last Field' id='remove-field'>
+			</div>
+			<div class='submit'>
+				<input type="submit" class="button is-success" value='Calculate settlement'>
+			</div>
+		</form>
+	</div>
+
+	<div class="container" id='sketch-holder' style="border:solid"> </div>
+
+	<div class="container">
+		<table class="table is-bordered is-fullwidth">
+			<thead>
+				<tr>
+					<th>Layer</th>
+					<th>Delta Z</th>
+					<th>qc</th>
+					<th>Ec</th>
+					<th>Iz</th>
+					<th>(Iz x Delta z)/Ec</th>
+				</tr>
+			</thead>
+			<tbody id='dataTableRows'>
+				<!-- This is where the dataObject will be inserted into -->
+			</tbody>
+		</table>
+	</div>
+	<div class="container">
+		<div id="c1">
+			<!-- This is the area where a printout of the c1 value will be placed -->
+		</div>
+		<div id="settlement">
+			<!-- The final settlelment calculation will be placed here -->
+		</div>
+	</div>
+	<script src="libraries/p5.js"></script>
+	<script src="js/p5_assets/utilities.js"></script>
+	<script src="js/p5_assets/BaseCanvas.js"></script>
+	<script src="js/p5_assets/GraphCanvas.js"></script>
+	<script src="js/p5_assets/DataTable.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/sketch.js"></script>
+</body>
+
+</html>
