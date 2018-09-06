@@ -11,4 +11,4 @@ Then
 Run the index.html file using Live Sever extension for VSCode. 
 
 ## Project Goals
-The main goal of this 
+The objective of the project was to become familiar with the Bulma framework while implementing the p5.js librabry to accuratly recreate the graphical method to calculate settlement of a foundation.
