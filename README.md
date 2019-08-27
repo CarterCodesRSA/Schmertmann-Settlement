@@ -1,6 +1,10 @@
 # Schmertmann-Settlement
 Graphical analysis to obtain foundation settlement through the use of penettration data from the Dutch Penetration Cone.
 
+## Frameworks
+- p5
+- Bulma
+
 ## Installation
 Requirements: Bulma CSS Framework
 
