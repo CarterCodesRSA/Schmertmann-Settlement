@@ -2,7 +2,7 @@
 Graphical analysis to obtain foundation settlement through the use of penettration data from the Dutch Penetration Cone.
 
 ## Frameworks
-- p5
+- p5.js
 - Bulma
 
 ## Installation
