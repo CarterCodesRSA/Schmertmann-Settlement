@@ -6,9 +6,11 @@ Graphical analysis to obtain foundation settlement through the use of penettrati
 - Bulma
 
 ## Installation
-Requirements: Bulma CSS Framework
+Use the package manager [npm](https://www.npmjs.com/) to install related dependencies.
 
-npm install bulma **OR** add the bulma CDN link tag in the html file
+```bash
+npm install
+```
 
 Then
 
